@@ -8,5 +8,6 @@ namespace OA_Service.Interface
     {
         IEnumerable<OA_DataAccess.Product> GetProduct();
         OA_DataAccess.Product GetProduct(int id);
+
     }
 }

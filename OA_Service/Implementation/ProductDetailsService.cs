@@ -16,7 +16,7 @@ namespace OA_Service.Implementation
             this.productDetailsRepository = productDetailsRepository;
         }
 
-        public ProductDetails GetUserProfile(int id)
+        public ProductDetails GetProductDetail(int id)
         {
             return productDetailsRepository.Get(id);
         }

@@ -21,25 +21,25 @@ namespace OA_WebApi.Controllers
             this.productService = productService;
             this.productDetailsService = productDetailsService;
         }
+ 
         [HttpGet]
-        public List<Product> Get()
+        public List<ProductDetails> Get()
         {
-            List<Product> productList = new List<Product>();
-
-            var products = productService.GetProduct().ToList();
-            foreach (var product in products)
+            List<ProductDetails> productDetails = new List<ProductDetails>();
+            var prodcutList=productService.GetProduct().ToList();
+            foreach(var product in prodcutList)
             {
-                Product item = new Product
+                var productDetailList = productDetailsService.GetProductDetail(product.ProductId);
+                ProductDetails details = new ProductDetails
                 {
                     ProductId = product.ProductId,
-                    Department = product.Department,
-
+                    ProductName = product.ProductName,
+                    Price = productDetailList.Price,
+                    StockAvailable = productDetailList.StockAvailable,
                 };
-                productList.Add(item);
+                productDetails.Add(details);
             }
-            return productList;
-            
-
+            return productDetails;
         }
     }
-    }
+   }

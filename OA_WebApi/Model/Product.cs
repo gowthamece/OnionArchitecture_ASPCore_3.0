@@ -9,11 +9,8 @@ namespace OA_WebApi.Model
 {
     public class Product
     {
-        [HiddenInput]
-        public int ProductId { get; set; }
-        [Display(Name = "Department")]
-        public string Department { get; set; }
-        [Display(Name = "Product Name")]
+        
+        public int ProductId { get; set; }                        
         public string ProductName { get; set; }
     }
 }

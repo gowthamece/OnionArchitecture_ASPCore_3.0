@@ -5,7 +5,7 @@ using System.Text;
 namespace OA_Service.Interface
 {
     public interface IProductDetailsService
-    {
-        OA_DataAccess.ProductDetails GetUserProfile(int id);
+    {        
+        OA_DataAccess.ProductDetails GetProductDetail(int id);
     }
 }

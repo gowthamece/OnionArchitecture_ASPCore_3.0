@@ -7,5 +7,6 @@ namespace OA_DataAccess
  public class BaseEntity
     {
         public int ProductId { get; set; }
+        
     }
 }

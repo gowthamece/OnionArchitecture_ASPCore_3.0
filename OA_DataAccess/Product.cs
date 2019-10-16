@@ -6,7 +6,8 @@ namespace OA_DataAccess
 {
   public class Product : BaseEntity
     {
-        public string Department { get; set; }
+
+        public string ProductName { get; set; }
         public virtual ProductDetails ProductDetails { get; set; }
     }
 }

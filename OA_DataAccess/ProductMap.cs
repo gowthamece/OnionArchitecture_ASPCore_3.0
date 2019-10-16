@@ -11,7 +11,7 @@ namespace OA_DataAccess
         {
 
             entityBuilder.HasKey(p => p.ProductId);
-            entityBuilder.Property(p => p.Department).IsRequired();
+            entityBuilder.Property(p => p.ProductName).IsRequired();           
             entityBuilder.HasOne(p => p.ProductDetails).WithOne(p => p.Product).HasForeignKey<ProductDetails>(x => x.ProductId);
         }
     }
